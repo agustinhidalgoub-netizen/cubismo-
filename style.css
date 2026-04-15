@@ -7,7 +7,6 @@ ul {
   margin: 0;
 }
 
-
 img {
   border-radius: 15px;   /* redondea los bordes */
 }
@@ -46,7 +45,7 @@ h4 {
 
 h5{
     color:#ffffff;
-     text-decoration: underline;
+
     font-family: 'Montserrat Alternates';
     font-weight:600 ; /* THIN */
 }
@@ -59,6 +58,29 @@ p {
 
 body {
     background-color: #dfe6f0;
+}
+
+
+ul {
+  color: #0a0a0a;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700; /* semibold */
+ 
+}
+
+summary {
+  color: #0a0a0a;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 700;
+  
+}
+
+
+details p {
+  color: #0a0a0a;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400; /* normal */
+  
 }
 
 
