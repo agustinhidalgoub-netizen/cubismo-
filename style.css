@@ -1,4 +1,5 @@
 /* 1. Sacar los puntitos de las listas del nav */
+/* 1. Sacar los puntitos de las listas */
 ul {
   list-style: none;   /* elimina los puntitos */
   padding: 0;
@@ -7,24 +8,25 @@ ul {
 
 /* 2. Dar redondez a todas las imágenes */
 img {
-  border-radius: 15px;   /* puedes ajustar el valor */
+  border-radius: 15px;   /* redondea los bordes */
 }
 
+/* 3. Dar color de fondo a cada sección usando clases */
 .header {
-  background-color: #a41d1d;
+  background-color: #a41d1d;   /* rojo oscuro */
 }
 
 .main {
-  background-color: #1ec853;
+  background-color: #1ec853;   /* verde intenso */
 }
 
 .footer {
-  background-color: #1111a3;
+  background-color: #1111a3;   /* azul fuerte */
 }
 
-
-/* 4. Dar borde al div del logo */
+/* 4. Dar borde al logo */
 header nav a img {
   border: 2px solid black;   /* borde negro alrededor del logo */
-  padding: 5px;              /* espacio interno para que se vea mejor */
+  padding: 5px;              /* espacio interno */
 }
+
