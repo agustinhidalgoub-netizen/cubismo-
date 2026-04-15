@@ -66,26 +66,28 @@ ul {
   font-weight: 700; /* semibold */
  
 }
-summary {
-  color: #0a0a0a;
+
+s/* Tipografía para el header */
+.nav-header ul {
   font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 700;
-  
+  font-weight:500;
 }
 
-
-details p {
-  color: #0a0a0a;
+/* Tipografía para las preguntas frecuentes */
+.faq summary {
   font-family: 'Montserrat Alternates', sans-serif;
-  font-weight: 400; /* normal */
-  
+  font-weight:500;
 }
 
+.faq p {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 400;
+}
 
-/* Footer en azul fuerte */
-footer {
-    color: #ffffff;
-  background-color: #1f4054;
+/* Tipografía para el footer */
+.nav-footer ul {
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 500;
 }
 
 /* 4. Dar borde al logo */
