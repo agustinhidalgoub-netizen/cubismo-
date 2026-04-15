@@ -22,13 +22,20 @@ h1 {
 }
 
 
-/* Main en verde intenso */
-h2 h3 h4 h5 {
-     color: beige;
-    background-color: #1ec853;
-    text-decoration: underline;
+h2{
+    color: #1ec853;
+    background-color: #a41d1d;
+     text-decoration: underline;
     font-family: 'Montserrat Alternates';
-    font-weight: 400; /* normal */
+    font-weight: 600; /* SEMIBOLD */
+}
+
+h3{
+    color: #a41d1d;
+    background-color: #1ec853;
+        text-decoration: underline;
+    font-family: 'Montserrat Alternates';
+    font-weight: 500; /* LIGHT */
 }
 
 /* Footer en azul fuerte */
