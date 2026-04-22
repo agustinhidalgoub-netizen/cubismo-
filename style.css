@@ -99,37 +99,21 @@ header nav a img {
   padding: 5px;              /* espacio interno */
 }
 
-/* ========================= */
-/* MEDIA QUERIES RESPONSIVE */
-/* ========================= */
-
-/* Celulares (pantallas pequeñas: hasta 699px) */
-@media (max-width: 699px) {
-  body {
-    background-color: hsl(135, 80%, 50%); /* verde */
-  }
-  p {
-    column-count: 1;
-  }
-}
-
-/* Tablets (pantallas medianas: 700px a 1199px) */
-@media (min-width: 700px) and (max-width: 1199px) {
+@media (min-width: 700px) {
   body {
     background-color: rgb(155, 23, 153); /* violeta */
   }
   p {
-    column-count: 2;
+    column-count: 2; /* dos columnas */
   }
 }
 
-/* Desktop (pantallas grandes: 1200px en adelante) */
+/* Desktop (pantallas grandes: desde 1200px) */
 @media (min-width: 1200px) {
   body {
     background-color: rgb(206, 199, 3); /* amarillo */
   }
   p {
-    column-count: 3;
+    column-count: 3; /* tres columnas */
   }
 }
-
