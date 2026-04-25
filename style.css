@@ -118,10 +118,7 @@ main {
 }
 
 /* Desktop (pantallas grandes: desde 1200px) */
-@media (min-width: 1200px) {
-  body {
-    background-color: rgb(206, 199, 3); /* amarillo */
-  }
+@media (min-width: 1200px) 
   p {
     column-count: 3; /* tres columnas */
   }
