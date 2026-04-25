@@ -86,8 +86,12 @@ body {
   font-weight: 400;
 }
 
+footer{
+  background-color: #1f4054;
+}
+
 /* Tipografía para el footer */
-nav.footer {
+nav.footer ul {
   background-color: #1f4054;
   font-family: 'Montserrat Alternates', sans-serif;
   font-weight: 500;
