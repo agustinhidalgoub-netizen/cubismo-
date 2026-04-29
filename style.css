@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/Estilos generales/
+/* Estilos generales */
 body {
     background-color: #dfe6f0;
     font-family: "Montserrat Alternates";
@@ -13,10 +13,10 @@ ul {
 }
 
 img {
-border-radius: 15px;
+    border-radius: 15px;
 }
 
-/Estilos de los titulos/
+/* Estilos de los titulos */
 
 h1 {
     color: #ff6d00;
@@ -55,7 +55,7 @@ p {
     column-gap: 20px;
 }
 
-/Estilos del navegador principal/
+/* Estilos del navegador principal */
 
 .nav-header{
     display:flex;
@@ -63,7 +63,7 @@ p {
     gap: 20px;
     font-family: "Montserrat Alternates";
     font-weight: 500;
-     background-color: #1f4054; 
+    background-color: #1f4054; 
     width: 100%;             
     margin: 0;               
     padding: 0;
@@ -86,48 +86,47 @@ p {
 }
 
 main {
-  min-height: 100vh;
-  display: flex;
-flex-direction: column;
-flex-wrap: wrap;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-/Tipografia preguntas frecuentes/
+/* Tipografia preguntas frecuentes */
 
 .faq summary {
-     font-weight: 400;
+    font-weight: 400;
 }
-
 
 .faq p {
     font-weight: 400;
 }
 
-/Footer - estilos/
+/* Footer - estilos */
 
 footer {
     background-color: #1f4054;
     font-weight: 400;
 }
 
-/CELULAR/
+/* CELULAR */
 
 @media (min-width: 460px){
-    /Celular/
+    /* Celular */
     p {
         column-count: 1;
     }
 }
 
 @media (min-width: 700px) {
-    /Tablet/
+    /* Tablet */
     p {
         column-count: 2;
     }
 }
 
 @media (min-width: 1200px) {
-    /Desktop/
+    /* Desktop */
     p {
         column-count: 3;
     }
