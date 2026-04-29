@@ -2,7 +2,7 @@
 
 /*Estilos generales*/
 body {
-    background-color: #dfe6f0;
+    background-color: #e4e4e4;
     font-family: "Montserrat Alternates";
 }
 
@@ -19,19 +19,19 @@ border-radius: 15px;
 /*Estilos de los titulos*/
 
 h1 {
-    color: #c4bbb5;
+    color: #8b0000;
     text-decoration: underline;
     font-weight: 900;
 }
 
 h2{
-    color: #6d0000;
+    color: #9e2525;
     text-decoration: underline;
     font-weight: 700;
 }
 
 h3 {
-    color: #531300;
+    color: #8b3838;
     text-decoration: underline;
     font-weight: 600;
 }
@@ -58,10 +58,10 @@ p {
 /*Estilos del navegador principal*/
 
 header {
-  background-color: #000000; /* azul */
-  width: 100%;              /* ocupa todo el ancho */
-  margin: 0;                /* sin márgenes */
-  padding: 0;               /* sin padding */
+  background-color: #000000;
+  width: 100%;              
+  margin: 0;                
+  padding: 0;               
 }
 
 .nav-header{
