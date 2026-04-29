@@ -2,7 +2,7 @@
 
 /* Estilos generales */
 body {
-    background-color: #dfe6f0;
+    background-color: #e5e5e5; /* gris suave */
     font-family: "Montserrat Alternates";
 }
 
@@ -13,46 +13,47 @@ ul {
 }
 
 img {
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 /* Estilos de los titulos */
 
 h1 {
-    color: #ff6d00;
-    text-decoration: underline;
+    color: #2c2c2c;
+    text-decoration: none;
     font-weight: 900;
 }
 
 h2{
-    color: #0a0a0a;
-    text-decoration: underline;
+    color: #3a3a3a;
+    text-decoration: none;
     font-weight: 700;
 }
 
 h3 {
-    color: #ff6d00;
-    text-decoration: underline;
+    color: #444;
+    text-decoration: none;
     font-weight: 600;
 }
 
 h4{
-    color: red;
-    text-decoration: underline;
+    color: #555;
+    text-decoration: none;
     font-weight: 500;
 }
 
 h5 {
-    color: green;
-    text-decoration: underline;
+    color: #666;
+    text-decoration: none;
     font-weight: 600;
 }
 
 p {
-    color: #0a0a0a;
+    color: #2a2a2a;
     font-weight: 400;
     column-count: 1;
-    column-gap: 20px;
+    column-gap: 30px;
+    line-height: 1.6;
 }
 
 /* Estilos del navegador principal */
@@ -63,50 +64,54 @@ p {
     gap: 20px;
     font-family: "Montserrat Alternates";
     font-weight: 500;
-    background-color: #1f4054; 
+    background-color: #2b2b2b; /* gris oscuro */
     width: 100%;             
     margin: 0;               
-    padding: 0;
+    padding: 10px 20px;
 }
 
 .nav-header ul{
     font-weight: 500;
-    text-decoration: none;
-    color: #dfe6f0;
+    color: #f0f0f0;
 }
 
 .nav-header ul li{
-    text-decoration: none;
-    color: #dfe6f0;
+    color: #f0f0f0;
 }
 
 .nav-header a{
-    text-decoration: none;
-    color: #dfe6f0;
+    color: #f0f0f0;
 }
+
+/* MAIN */
 
 main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 /* Tipografia preguntas frecuentes */
 
 .faq summary {
-    font-weight: 400;
+    font-weight: 500;
+    color: #333;
 }
 
 .faq p {
     font-weight: 400;
+    color: #555;
 }
 
 /* Footer - estilos */
 
 footer {
-    background-color: #1f4054;
+    background-color: #2b2b2b;
+    color: #e0e0e0;
     font-weight: 400;
+    padding: 20px;
 }
 
 /* CELULAR */
