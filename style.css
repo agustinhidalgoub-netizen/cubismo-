@@ -1,234 +1,135 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* =========================
-   RESET
-========================= */
-
-* {
-  box-sizing: border-box;
-}
-
+/*Estilos generales*/
 body {
-  margin: 0;
-  font-family: "Montserrat Alternates", sans-serif;
-  background-color: #e4e4e4;
-  color: #111;
+    background-color: #cacaca;
+    font-family: "Montserrat Alternates";
 }
 
 ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    list-style: none;
+    padding: 0%;
+    margin: 0%;
 }
 
 img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
+border-radius: 15px;
 }
 
-/* =========================
-   HEADER / NAV
-========================= */
-
-header {
-  background-color: #690000;
-}
-
-.nav-header {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav-header img {
-  width: 100px;
-}
-
-/* MENU PRINCIPAL */
-.menu-principal {
-  display: flex;
-  gap: 25px;
-}
-
-.menu-principal > li {
-  position: relative;
-}
-
-.menu-principal a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-}
-
-/* SUBMENÚ */
-.menu-principal li ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-
-  background-color: #8b0000;
-  padding: 10px;
-  min-width: 180px;
-}
-
-.menu-principal li:hover ul {
-  display: block;
-}
-
-.menu-principal li ul li {
-  margin-bottom: 8px;
-}
-
-/* =========================
-   MAIN
-========================= */
-
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 40px 20px;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-  margin-bottom: 40px;
-}
+/*Estilos de los titulos*/
 
 h1 {
-  color: #8b0000;
-  font-weight: 900;
-  margin-bottom: 20px;
+    color: #630000;
+    text-decoration: underline;
+    font-weight: 900;
 }
 
-h2 {
-  color: #9e2525;
-  margin-top: 40px;
+h2{
+    color: #0a0a0a;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+h3 {
+    color: #4d0000;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+h4{
+    color: red;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+h5 {
+    color: rgb(88, 0, 0);
+    text-decoration: underline;
+    font-weight: 600;
 }
 
 p {
-  line-height: 1.6;
-  margin-bottom: 15px;
+    color: #0a0a0a;
+    font-weight: 400;
+    column-count: 1;
+    column-gap: 20px;
 }
 
-/* =========================
-   ACCESOS
-========================= */
+/*Estilos del navegador principal*/
 
-.accesos ul {
+.nav-header{
+    display:flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-family: "Montserrat Alternates";
+    font-weight: 500;
+    background-color: #740000; 
+    width: 100%;             
+    margin: 0;               
+    padding: 1em;
+    flex-wrap: wrap;
+}
+
+.nav-header ul{
+    font-weight: 500;
+    text-decoration: none;
+    color: #d3d3d3;
+}
+
+.nav-header ul li{
+    text-decoration: none;
+    color: #c9c9c9;
+}
+
+.nav-header a{
+    text-decoration: none;
+    color: #e9e9e9;
+}
+
+main {
+  min-height: 100vh;
   display: flex;
-  gap: 15px;
-  margin: 30px 0;
+flex-direction: column;
+flex-wrap: wrap;
 }
 
-.accesos a {
-  background-color: #690000;
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-/* =========================
-   FAQ
-========================= */
-
-.faq ul {
-  margin-top: 20px;
-}
-
-.faq li {
-  margin-bottom: 10px;
-}
+/*Tipografia preguntas frecuentes*/
 
 .faq summary {
-  cursor: pointer;
-  font-weight: 600;
+     font-weight: 400;
 }
+
 
 .faq p {
-  margin-top: 8px;
+    font-weight: 400;
 }
 
-/* =========================
-   GALERIA
-========================= */
-
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  margin: 40px 0;
-}
-
-.galeria img {
-  height: 220px;
-  object-fit: cover;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/*Footer - estilos*/
 
 footer {
-  background-color: #611717;
-  color: white;
-  padding: 30px;
-
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
+    background-color: #581a1a;
+    font-weight: 400;
 }
 
-footer ul {
-  display: flex;
-  gap: 15px;
+/*CELULAR*/
+
+@media (min-width: 460px){
+    /*Celular*/
+    p {
+        column-count: 1;
+    }
 }
 
-footer a {
-  color: white;
-  text-decoration: none;
+@media (min-width: 700px) {
+    /*Tablet*/
+    p {
+        column-count: 2;
+    }
 }
 
-footer iframe {
-  border-radius: 10px;
-  max-width: 400px;
-  width: 100%;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 900px) {
-
-  .menu-principal {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .galeria {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  footer {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .galeria {
-    grid-template-columns: 1fr;
-  }
+@media (min-width: 1200px) {
+    /*Desktop*/
+    p {
+        column-count: 3;
+    }
 }
