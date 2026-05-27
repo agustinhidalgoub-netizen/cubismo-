@@ -770,3 +770,275 @@ footer iframe {
     right: 8px;
   }
 }
+/* =========================
+   JAVASCRIPT PRO
+========================= */
+
+.sin-scroll {
+  overflow: hidden;
+}
+
+.header-scroll {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+}
+
+.barra-progreso {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  background-color: white;
+  z-index: 1000;
+}
+
+.boton-menu {
+  display: none;
+  width: 44px;
+  height: 34px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.boton-menu span {
+  display: block;
+  width: 100%;
+  height: 4px;
+  margin-bottom: 7px;
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.boton-menu-activo span:nth-child(1) {
+  transform: translateY(11px) rotate(45deg);
+}
+
+.boton-menu-activo span:nth-child(2) {
+  opacity: 0;
+}
+
+.boton-menu-activo span:nth-child(3) {
+  transform: translateY(-11px) rotate(-45deg);
+}
+
+.menu-abierto {
+  overflow: hidden;
+}
+
+.link-activo {
+  border-bottom: 2px solid white;
+  padding-bottom: 4px;
+}
+
+.animado {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+
+.animado.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.titulo-escribiendo::after {
+  content: "|";
+  animation: cursorParpadeo 0.8s infinite;
+}
+
+@keyframes cursorParpadeo {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+.controles-carrusel {
+  margin-top: 60px;
+  margin-bottom: -40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.controles-carrusel button {
+  background-color: #870000;
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.controles-carrusel button:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.84);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 24px;
+}
+
+.lightbox-activo {
+  display: flex;
+}
+
+.lightbox-contenido {
+  width: min(900px, 95%);
+  position: relative;
+  background-color: #dfe8f1;
+  padding: 18px;
+  animation: zoomLightbox 0.35s ease;
+}
+
+@keyframes zoomLightbox {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.lightbox-contenido img {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+}
+
+.lightbox-contenido p {
+  margin: 14px 0 0;
+  color: #111;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cerrar-lightbox {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  background-color: #870000;
+  color: white;
+  border: none;
+  width: 42px;
+  height: 42px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.contador-artistas {
+  margin-top: 80px;
+  padding: 40px;
+  border-top: 2px solid rgba(135, 0, 0, 0.25);
+  border-bottom: 2px solid rgba(135, 0, 0, 0.25);
+  text-align: center;
+}
+
+.contador-artistas span {
+  display: block;
+  color: #870000;
+  font-size: clamp(50px, 8vw, 90px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.contador-artistas p {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.buscador-obras {
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: center;
+}
+
+.buscador-obras input {
+  width: min(520px, 100%);
+  padding: 14px 18px;
+  border: 2px solid #870000;
+  background-color: transparent;
+  color: #111;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.buscador-obras input::placeholder {
+  color: #870000;
+}
+
+.boton-arriba {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 44px;
+  height: 44px;
+  background-color: #870000;
+  color: white;
+  border: none;
+  font-size: 24px;
+  font-weight: 900;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 200;
+}
+
+.boton-arriba-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.boton-arriba:hover {
+  transform: translateY(-4px);
+}
+
+/* MOBILE JS PRO */
+
+@media (max-width: 600px) {
+  .boton-menu {
+    display: block;
+  }
+
+  .menu-principal {
+    display: none;
+    width: 100%;
+  }
+
+  .menu-principal.menu-activo {
+    display: flex;
+  }
+
+  .controles-carrusel {
+    justify-content: flex-start;
+    margin-top: 40px;
+    margin-bottom: -26px;
+  }
+
+  .cerrar-lightbox {
+    top: 8px;
+    right: 8px;
+  }
+}
