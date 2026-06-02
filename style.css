@@ -1,918 +1,643 @@
+```css
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600;700;800;900&display=swap');
 
 /* =========================
-   RESET GENERAL
+RESET GENERAL
 ========================= */
 
-* {
-  box-sizing: border-box;
+*{
+  box-sizing:border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  margin: 0;
-  background-color: #dfe8f1;
-  font-family: "Montserrat Alternates", sans-serif;
-  color: #111;
+body{
+  margin:0;
+  background-color:#dfe8f1;
+  color:#111;
+  font-family:"Montserrat Alternates",sans-serif;
+  overflow-x:hidden;
 }
 
 body.sin-scroll,
-body.menu-abierto {
-  overflow: hidden;
+body.menu-abierto{
+  overflow:hidden;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+img{
+  display:block;
+  max-width:100%;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+ul{
+  margin:0;
+  padding:0;
+  list-style:none;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-  background-color: #870000;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  transition: box-shadow 0.3s ease;
-}
-
-.header-scroll {
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
-}
-
-.nav-header {
-  width: 100%;
-  min-height: 72px;
-  padding: 0 28px;
-  display: flex;
-  align-items: center;
-  gap: 60px;
-}
-
-.logo img {
-  width: 120px;
-  height: auto;
-}
-
-.menu-principal {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 18px;
-}
-
-.menu-principal a {
-  color: white;
-  font-size: 13px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transition: opacity 0.3s ease;
-}
-
-.menu-principal a:hover {
-  opacity: 0.7;
-}
-
-.link-activo {
-  border-bottom: 2px solid white;
-  padding-bottom: 4px;
-}
-
-/* BOTÓN MENÚ MOBILE */
-
-.boton-menu {
-  display: none;
-  width: 44px;
-  height: 34px;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-  margin-left: auto;
-}
-
-.boton-menu span {
-  display: block;
-  width: 100%;
-  height: 4px;
-  margin-bottom: 7px;
-  background-color: white;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.boton-menu-activo span:nth-child(1) {
-  transform: translateY(11px) rotate(45deg);
-}
-
-.boton-menu-activo span:nth-child(2) {
-  opacity: 0;
-}
-
-.boton-menu-activo span:nth-child(3) {
-  transform: translateY(-11px) rotate(-45deg);
+a{
+  text-decoration:none;
+  color:inherit;
 }
 
 /* =========================
-   MAIN GENERAL
+HEADER
 ========================= */
 
-main {
-  padding: 42px 6% 64px;
+header{
+  background-color:#870000;
+  position:sticky;
+  top:0;
+  z-index:999;
+  transition:box-shadow .3s ease;
 }
 
-h1 {
-  margin: 0 0 28px;
-  color: #111;
-  font-size: clamp(34px, 5vw, 60px);
-  line-height: 1;
-  font-weight: 900;
-  text-transform: uppercase;
+.header-scroll{
+  box-shadow:0 10px 24px rgba(0,0,0,.22);
 }
 
-h2 {
-  margin: 0 0 32px;
-  color: #870000;
-  font-size: clamp(28px, 4vw, 48px);
-  line-height: 1.05;
-  font-weight: 900;
-  text-transform: uppercase;
+.nav-header{
+  min-height:72px;
+  padding:0 28px;
+  display:flex;
+  align-items:center;
+  gap:50px;
 }
 
-h3 {
-  margin: 0 0 18px;
-  font-weight: 800;
+.logo img{
+  width:120px;
 }
 
-p {
-  margin: 0 0 20px;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 500;
+.menu-principal{
+  width:100%;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.menu-principal a{
+  color:white;
+  font-size:13px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.5px;
+  transition:opacity .3s ease;
+}
+
+.menu-principal a:hover{
+  opacity:.7;
+}
+
+.link-activo{
+  border-bottom:2px solid white;
+  padding-bottom:4px;
 }
 
 /* =========================
-   INDEX
+MENU MOBILE
 ========================= */
 
-.inicio-contenido {
-  display: grid;
-  grid-template-columns: 34% 1fr;
-  gap: 32px;
-  align-items: start;
+.boton-menu{
+  display:none;
+  width:42px;
+  height:34px;
+  border:none;
+  background:transparent;
+  cursor:pointer;
+  margin-left:auto;
+  padding:0;
 }
 
-.imagen-principal {
-  width: 100%;
-  height: 430px;
-  object-fit: cover;
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.18);
-  transition: transform 0.35s ease, filter 0.35s ease;
-  cursor: pointer;
+.boton-menu span{
+  display:block;
+  width:100%;
+  height:4px;
+  margin-bottom:7px;
+  background-color:white;
+  transition:.3s ease;
 }
 
-.imagen-principal:hover {
-  transform: scale(1.02);
-  filter: contrast(1.08);
+.boton-menu-activo span:nth-child(1){
+  transform:translateY(11px) rotate(45deg);
 }
 
-.texto-inicio p {
-  font-size: 18px;
+.boton-menu-activo span:nth-child(2){
+  opacity:0;
+}
+
+.boton-menu-activo span:nth-child(3){
+  transform:translateY(-11px) rotate(-45deg);
 }
 
 /* =========================
-   FAQ
+MAIN
 ========================= */
 
-.faq {
-  margin-top: 78px;
+main{
+  padding:42px 6% 70px;
 }
 
-.preguntas {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px 90px;
+h1{
+  margin:0 0 30px;
+  color:#870000;
+  font-size:clamp(34px,5vw,64px);
+  line-height:1;
+  font-weight:900;
+  text-transform:uppercase;
 }
 
-details {
-  font-size: 19px;
-  font-weight: 600;
-  border-bottom: 2px solid #870000;
-  padding-bottom: 16px;
+h2{
+  margin:0 0 26px;
+  color:#870000;
+  font-size:clamp(28px,4vw,46px);
+  line-height:1.05;
+  font-weight:900;
+  text-transform:uppercase;
 }
 
-summary {
-  cursor: pointer;
-  list-style: none;
+h3{
+  margin:0 0 18px;
+  font-size:18px;
+  font-weight:800;
 }
 
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary:hover {
-  color: #870000;
-}
-
-details p {
-  margin-top: 18px;
-  color: #870000;
-  font-size: 16px;
-  line-height: 1.6;
+p{
+  margin:0 0 18px;
+  font-size:18px;
+  line-height:1.6;
+  font-weight:500;
 }
 
 /* =========================
-   GALERÍA / CARRUSEL
+INDEX
 ========================= */
 
-.galeria {
-  margin-top: 76px;
-  display: flex;
-  gap: 34px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding-bottom: 18px;
+.inicio-contenido{
+  display:grid;
+  grid-template-columns:34% 1fr;
+  gap:36px;
+  align-items:start;
 }
 
-.galeria img {
-  flex: 0 0 280px;
-  height: 260px;
-  object-fit: cover;
-  scroll-snap-align: start;
-  cursor: pointer;
-  transition: transform 0.35s ease, filter 0.35s ease;
+.imagen-principal{
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  cursor:pointer;
+  transition:.35s ease;
+  box-shadow:0 14px 26px rgba(0,0,0,.18);
 }
 
-.galeria img:hover {
-  transform: translateY(-8px) scale(1.03);
-  filter: contrast(1.08) saturate(1.05);
+.imagen-principal:hover{
+  transform:scale(1.02);
 }
 
-.galeria::-webkit-scrollbar {
-  height: 8px;
-}
-
-.galeria::-webkit-scrollbar-thumb {
-  background-color: #870000;
-}
-
-.controles-carrusel {
-  margin-top: 60px;
-  margin-bottom: -40px;
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-}
-
-.controles-carrusel button {
-  background-color: #870000;
-  color: white;
-  border: none;
-  width: 42px;
-  height: 42px;
-  font-size: 22px;
-  font-weight: 900;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.controles-carrusel button:hover {
-  transform: scale(1.08);
-  opacity: 0.85;
+.texto-inicio p{
+  font-size:18px;
 }
 
 /* =========================
-   HISTORIA
+FAQ
 ========================= */
 
-.historia-hero {
-  max-width: 850px;
-  margin: 0 auto 70px;
+.faq{
+  margin-top:80px;
 }
 
-.historia-hero .intro {
-  font-size: 19px;
-  color: #333;
-  max-width: 680px;
+.preguntas{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px 90px;
 }
 
-.historia-bloque {
-  margin-bottom: 82px;
-  border-top: 2px solid rgba(135, 0, 0, 0.22);
-  padding-top: 42px;
+details{
+  border-bottom:2px solid #870000;
+  padding-bottom:16px;
+  font-size:19px;
+  font-weight:600;
 }
 
-.historia-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 42px;
-  align-items: center;
+summary{
+  cursor:pointer;
 }
 
-.historia-grid.reverse {
-  direction: rtl;
-}
-
-.historia-grid.reverse .historia-texto {
-  direction: ltr;
-}
-
-.historia-img {
-  width: 100%;
-  height: 330px;
-  object-fit: cover;
-  cursor: pointer;
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.16);
-}
-
-.historia-texto.solo {
-  max-width: 780px;
-}
-
-.historia-bloque.final {
-  border-bottom: 2px solid rgba(135, 0, 0, 0.22);
-  padding-bottom: 40px;
+details p{
+  margin-top:18px;
+  color:#870000;
+  font-size:16px;
 }
 
 /* =========================
-   ARTISTAS
+CARRUSEL
 ========================= */
 
-.seccion-artistas h1 {
-  text-align: center;
-  margin-bottom: 54px;
+.controles-carrusel{
+  width:100%;
+  max-width:1120px;
+  margin:60px auto 24px;
+  display:flex;
+  justify-content:flex-end;
+  gap:12px;
 }
 
-.grilla-artistas {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 38px;
-  align-items: start;
+.controles-carrusel button{
+  width:46px;
+  height:46px;
+  border:none;
+  background-color:#870000;
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+  transition:.3s ease;
 }
 
-.tarjeta-artista {
-  text-align: center;
-  transition: transform 0.35s ease;
+.controles-carrusel button:hover{
+  transform:scale(1.08);
 }
 
-.tarjeta-artista:hover {
-  transform: translateY(-10px);
+.galeria{
+  width:100%;
+  max-width:1120px;
+  margin:0 auto 80px;
+  display:flex;
+  gap:28px;
+  overflow-x:auto;
+  scroll-behavior:smooth;
+  scroll-snap-type:x mandatory;
+  padding-bottom:18px;
 }
 
-.tarjeta-artista img {
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-  cursor: pointer;
-  filter: grayscale(10%);
-  transition: filter 0.35s ease, transform 0.35s ease;
+.galeria img{
+  flex:0 0 360px;
+  width:360px;
+  height:300px;
+  object-fit:cover;
+  scroll-snap-align:start;
+  cursor:pointer;
+  transition:.35s ease;
 }
 
-.tarjeta-artista:hover img {
-  filter: grayscale(0%) contrast(1.08);
-  transform: scale(1.02);
+.galeria img:hover{
+  transform:translateY(-8px) scale(1.03);
 }
 
-.tarjeta-artista h2 {
-  margin: 16px 0 4px;
-  color: #111;
-  font-size: 20px;
-  font-weight: 800;
-  text-transform: none;
+.galeria::-webkit-scrollbar{
+  height:8px;
 }
 
-.tarjeta-artista p {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-/* CONTADOR ARTISTAS */
-
-.contador-artistas {
-  margin-top: 80px;
-  padding: 40px;
-  border-top: 2px solid rgba(135, 0, 0, 0.25);
-  border-bottom: 2px solid rgba(135, 0, 0, 0.25);
-  text-align: center;
-}
-
-.contador-artistas span {
-  display: block;
-  color: #870000;
-  font-size: clamp(50px, 8vw, 90px);
-  font-weight: 900;
-  line-height: 1;
-}
-
-.contador-artistas p {
-  margin-top: 12px;
-  font-size: 18px;
-  font-weight: 800;
-  text-transform: uppercase;
+.galeria::-webkit-scrollbar-thumb{
+  background-color:#870000;
 }
 
 /* =========================
-   DETALLE ARTISTAS
+ARTISTAS
 ========================= */
 
-.detalle-artista {
-  display: grid;
-  grid-template-columns: 34% 1fr 1fr;
-  gap: 36px;
-  align-items: start;
+.grilla-artistas{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:36px;
 }
 
-.detalle-imagen img {
-  width: 100%;
-  height: 430px;
-  object-fit: cover;
-  cursor: pointer;
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.18);
+.tarjeta-artista{
+  text-align:center;
+  transition:.35s ease;
 }
 
-.detalle-texto p {
-  font-size: 17px;
-  line-height: 1.55;
+.tarjeta-artista:hover{
+  transform:translateY(-10px);
 }
 
-.detalle-secundario {
-  margin-top: 76px;
-  padding-top: 34px;
-  border-top: 2px solid rgba(135, 0, 0, 0.25);
+.tarjeta-artista img{
+  width:100%;
+  height:360px;
+  object-fit:cover;
+  cursor:pointer;
 }
 
-.detalle-secundario img {
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  margin: 30px 0;
+.tarjeta-artista h2{
+  margin:16px 0 4px;
+  font-size:20px;
+  color:#111;
+}
+
+.tarjeta-artista p{
+  margin:0;
+  font-size:16px;
 }
 
 /* =========================
-   OBRAS
+OBRAS
 ========================= */
 
-.seccion-obras h1 {
-  text-align: center;
-  margin-bottom: 54px;
+.grilla-obras{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:34px;
 }
 
-.grilla-obras {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 34px;
+.tarjeta-obra{
+  background-color:rgba(255,255,255,.4);
+  transition:.35s ease;
 }
 
-.tarjeta-obra {
-  background-color: rgba(255, 255, 255, 0.35);
-  padding-bottom: 16px;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+.tarjeta-obra:hover{
+  transform:translateY(-10px);
 }
 
-.tarjeta-obra:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.16);
+.tarjeta-obra img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
 }
 
-.tarjeta-obra img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  cursor: pointer;
+.tarjeta-obra h2{
+  margin:18px 14px 6px;
+  color:#111;
+  font-size:20px;
 }
 
-.tarjeta-obra h2 {
-  margin: 18px 14px 6px;
-  color: #111;
-  font-size: 20px;
-  font-weight: 800;
-  text-transform: none;
-}
-
-.tarjeta-obra h3 {
-  margin: 0 14px 12px;
-  color: #870000;
-  font-size: 16px;
-  font-weight: 800;
-}
-
-.tarjeta-obra p {
-  margin: 0 14px;
-  font-size: 15px;
-  line-height: 1.45;
-}
-
-/* BUSCADOR OBRAS */
-
-.buscador-obras {
-  margin-bottom: 34px;
-  display: flex;
-  justify-content: center;
-}
-
-.buscador-obras input {
-  width: min(520px, 100%);
-  padding: 14px 18px;
-  border: 2px solid #870000;
-  background-color: transparent;
-  color: #111;
-  font-family: "Montserrat Alternates", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.buscador-obras input::placeholder {
-  color: #870000;
+.tarjeta-obra p{
+  margin:0 14px 18px;
+  font-size:15px;
 }
 
 /* =========================
-   OBRAS DESTACADAS
+DETALLE ARTISTAS
 ========================= */
 
-.obras-destacadas {
-  margin-top: 76px;
+.detalle-artista{
+  display:grid;
+  grid-template-columns:34% 1fr 1fr;
+  gap:36px;
 }
 
-.grilla-obras-destacadas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 34px;
+.detalle-imagen img{
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  cursor:pointer;
 }
 
-.grilla-obras-destacadas img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.35s ease, filter 0.35s ease;
-}
-
-.grilla-obras-destacadas img:hover {
-  transform: scale(1.04);
-  filter: contrast(1.08);
+.detalle-texto p{
+  font-size:17px;
 }
 
 /* =========================
-   LEGADO E INFLUENCIAS
+OBRAS DESTACADAS
 ========================= */
 
-.seccion-legado,
-.seccion-influencias {
-  margin-bottom: 70px;
+.obras-destacadas{
+  margin-top:80px;
 }
 
-.pagina-legado .detalle-secundario,
-.pagina-influencias .detalle-secundario {
-  max-width: 900px;
+.grilla-obras-destacadas{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.grilla-obras-destacadas img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  cursor:pointer;
+  transition:.35s ease;
+}
+
+.grilla-obras-destacadas img:hover{
+  transform:scale(1.03);
 }
 
 /* =========================
-   FOOTER
+FOOTER
 ========================= */
 
-footer {
-  background-color: #870000;
-  color: white;
-  padding: 42px 4%;
+footer{
+  background-color:#870000;
+  color:white;
+  padding:42px 4%;
 }
 
-.footer-contenedor {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr) 220px;
-  gap: 28px;
-  align-items: start;
+.footer-contenedor{
+  display:grid;
+  grid-template-columns:repeat(5,1fr) 220px;
+  gap:28px;
 }
 
-footer h3 {
-  margin: 0 0 18px;
-  font-size: 14px;
-  font-weight: 800;
-  text-transform: uppercase;
+footer h3{
+  margin:0 0 18px;
+  font-size:14px;
+  text-transform:uppercase;
 }
 
-footer li {
-  margin-bottom: 10px;
+footer li{
+  margin-bottom:10px;
 }
 
-footer a {
-  font-size: 12px;
-  line-height: 1.3;
-  transition: opacity 0.3s ease;
+footer a{
+  font-size:12px;
 }
 
-footer a:hover {
-  opacity: 0.65;
-}
-
-footer iframe {
-  width: 100%;
-  height: 120px;
-  border: 0;
+footer iframe{
+  width:100%;
+  height:120px;
+  border:0;
 }
 
 /* =========================
-   JAVASCRIPT VISUAL
+JAVASCRIPT VISUAL
 ========================= */
 
-.barra-progreso {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5px;
-  width: 0%;
-  background-color: white;
-  z-index: 1000;
+.animado{
+  opacity:0;
+  transform:translateY(30px);
+  transition:.7s ease;
 }
 
-.animado {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity 0.75s ease, transform 0.75s ease;
-}
-
-.animado.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.titulo-escribiendo::after {
-  content: "|";
-  animation: cursorParpadeo 0.8s infinite;
-}
-
-@keyframes cursorParpadeo {
-  0%, 100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
-
-/* LIGHTBOX */
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.84);
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-  padding: 24px;
-}
-
-.lightbox-activo {
-  display: flex;
-}
-
-.lightbox-contenido {
-  width: min(900px, 95%);
-  position: relative;
-  background-color: #dfe8f1;
-  padding: 18px;
-  animation: zoomLightbox 0.35s ease;
-}
-
-@keyframes zoomLightbox {
-  from {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.lightbox-contenido img {
-  width: 100%;
-  max-height: 75vh;
-  object-fit: contain;
-}
-
-.lightbox-contenido p {
-  margin: 14px 0 0;
-  color: #111;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.cerrar-lightbox {
-  position: absolute;
-  top: -18px;
-  right: -18px;
-  background-color: #870000;
-  color: white;
-  border: none;
-  width: 42px;
-  height: 42px;
-  font-size: 28px;
-  cursor: pointer;
-}
-
-/* BOTÓN VOLVER ARRIBA */
-
-.boton-arriba {
-  position: fixed;
-  right: 22px;
-  bottom: 22px;
-  width: 44px;
-  height: 44px;
-  background-color: #870000;
-  color: white;
-  border: none;
-  font-size: 24px;
-  font-weight: 900;
-  cursor: pointer;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 200;
-}
-
-.boton-arriba-visible {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.boton-arriba:hover {
-  transform: translateY(-4px);
+.animado.visible{
+  opacity:1;
+  transform:translateY(0);
 }
 
 /* =========================
-   TABLET RESPONSIVE
+LIGHTBOX
 ========================= */
 
-@media (max-width: 900px) {
-  .nav-header {
-    gap: 30px;
-  }
+.lightbox{
+  position:fixed;
+  inset:0;
+  background-color:rgba(0,0,0,.86);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+  padding:24px;
+}
 
-  .menu-principal {
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 18px;
-  }
+.lightbox-activo{
+  display:flex;
+}
+
+.lightbox-contenido{
+  width:min(900px,95%);
+  background-color:#dfe8f1;
+  padding:18px;
+  position:relative;
+}
+
+.lightbox-contenido img{
+  width:100%;
+  max-height:75vh;
+  object-fit:contain;
+}
+
+.cerrar-lightbox{
+  position:absolute;
+  top:-18px;
+  right:-18px;
+  width:42px;
+  height:42px;
+  border:none;
+  background-color:#870000;
+  color:white;
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* =========================
+BOTON ARRIBA
+========================= */
+
+.boton-arriba{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:46px;
+  height:46px;
+  border:none;
+  background-color:#870000;
+  color:white;
+  font-size:24px;
+  cursor:pointer;
+  opacity:0;
+  pointer-events:none;
+  transition:.3s ease;
+  z-index:300;
+}
+
+.boton-arriba-visible{
+  opacity:1;
+  pointer-events:auto;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media (max-width:900px){
 
   .inicio-contenido,
-  .historia-grid,
-  .historia-grid.reverse {
-    grid-template-columns: 1fr;
-    direction: ltr;
-  }
-
-  .imagen-principal,
-  .historia-img {
-    height: auto;
-  }
-
-  .preguntas {
-    grid-template-columns: 1fr;
+  .detalle-artista,
+  .preguntas{
+    grid-template-columns:1fr;
   }
 
   .grilla-artistas,
-  .grilla-obras {
-    grid-template-columns: repeat(2, 1fr);
+  .grilla-obras{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .detalle-artista {
-    grid-template-columns: 1fr;
+  .grilla-obras-destacadas{
+    grid-template-columns:1fr 1fr;
   }
 
-  .grilla-obras-destacadas {
-    grid-template-columns: 1fr 1fr;
+  .footer-contenedor{
+    grid-template-columns:1fr 1fr;
   }
 
-  .footer-contenedor {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  footer iframe {
-    grid-column: 1 / -1;
-    height: 180px;
+  footer iframe{
+    grid-column:1 / -1;
+    height:180px;
   }
 }
 
 /* =========================
-   MOBILE RESPONSIVE
+MOBILE
 ========================= */
 
-@media (max-width: 600px) {
-  .nav-header {
-    padding: 18px;
-    gap: 18px;
-    flex-wrap: wrap;
+@media (max-width:600px){
+
+  .nav-header{
+    padding:18px;
+    gap:18px;
+    flex-wrap:wrap;
   }
 
-  .boton-menu {
-    display: block;
+  .boton-menu{
+    display:block;
   }
 
-  .menu-principal {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    padding-top: 16px;
+  .menu-principal{
+    display:none;
+    width:100%;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+    padding-top:16px;
   }
 
-  .menu-principal.menu-activo {
-    display: flex;
+  .menu-principal.menu-activo{
+    display:flex;
   }
 
-  main {
-    padding: 32px 20px 46px;
+  main{
+    padding:32px 20px 50px;
   }
 
-  h1 {
-    font-size: 34px;
+  h1{
+    font-size:34px;
   }
 
-  h2 {
-    font-size: 28px;
+  h2{
+    font-size:28px;
   }
 
-  p {
-    font-size: 15px;
+  p{
+    font-size:15px;
   }
 
-  .galeria {
-    gap: 18px;
+  .controles-carrusel{
+    max-width:100%;
+    margin:40px 0 18px;
+    justify-content:flex-start;
   }
 
-  .galeria img {
-    flex: 0 0 85%;
-    height: 230px;
+  .galeria{
+    max-width:100%;
+    gap:18px;
   }
 
-  .controles-carrusel {
-    justify-content: flex-start;
-    margin-top: 40px;
-    margin-bottom: -26px;
+  .galeria img{
+    flex:0 0 85%;
+    width:85%;
+    height:230px;
   }
 
   .grilla-artistas,
   .grilla-obras,
   .grilla-obras-destacadas,
-  .footer-contenedor {
-    grid-template-columns: 1fr;
+  .footer-contenedor{
+    grid-template-columns:1fr;
   }
 
   .tarjeta-artista img,
   .tarjeta-obra img,
   .grilla-obras-destacadas img,
-  .detalle-imagen img {
-    height: auto;
+  .detalle-imagen img{
+    height:auto;
   }
 
-  .cerrar-lightbox {
-    top: 8px;
-    right: 8px;
-  }
-}
-/* CARRUSEL DESKTOP CORREGIDO */
-
-.galeria {
-  width: 100%;
-  overflow-x: auto;
-  display: flex;
-  gap: 34px;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-.galeria img {
-  flex: 0 0 420px;
-  height: 300px;
-  object-fit: cover;
-  scroll-snap-align: start;
-}
-
-@media (max-width: 600px) {
-  .galeria img {
-    flex: 0 0 85%;
-    height: 230px;
-  }
 }
