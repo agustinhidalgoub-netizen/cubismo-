@@ -292,6 +292,71 @@ CARRUSEL
 }
 
 /* =========================
+HISTORIA
+========================= */
+
+.historia-hero{
+  max-width:1120px;
+  margin:0 auto 70px;
+}
+
+.historia-hero .intro{
+  font-size:19px;
+  max-width:900px;
+  color:#111;
+}
+
+.historia-hero img,
+.historia-img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  object-position:center;
+  margin-top:28px;
+  box-shadow:0 14px 26px rgba(0,0,0,.18);
+  cursor:pointer;
+}
+
+.historia-bloque{
+  max-width:1120px;
+  margin:0 auto 82px;
+  border-top:2px solid rgba(135,0,0,.25);
+  padding-top:42px;
+}
+
+.historia-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:42px;
+  align-items:center;
+}
+
+.historia-grid.reverse{
+  direction:rtl;
+}
+
+.historia-grid.reverse .historia-texto{
+  direction:ltr;
+}
+
+.historia-texto.solo{
+  max-width:850px;
+}
+
+.historia-bloque img{
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  object-position:center;
+  cursor:pointer;
+}
+
+.historia-bloque.final{
+  border-bottom:2px solid rgba(135,0,0,.25);
+  padding-bottom:42px;
+}
+
+/* =========================
 ARTISTAS
 ========================= */
 
@@ -541,8 +606,11 @@ TABLET
 
   .inicio-contenido,
   .detalle-artista,
-  .preguntas{
+  .preguntas,
+  .historia-grid,
+  .historia-grid.reverse{
     grid-template-columns:1fr;
+    direction:ltr;
   }
 
   .grilla-artistas,
@@ -626,18 +694,21 @@ MOBILE
     height:230px;
   }
 
-  .grilla-artistas,
-  .grilla-obras,
-  .grilla-obras-destacadas,
-  .footer-contenedor{
-    grid-template-columns:1fr;
-  }
-
+  .historia-hero img,
+  .historia-img,
+  .historia-bloque img,
   .tarjeta-artista img,
   .tarjeta-obra img,
   .grilla-obras-destacadas img,
   .detalle-imagen img{
     height:auto;
+  }
+
+  .grilla-artistas,
+  .grilla-obras,
+  .grilla-obras-destacadas,
+  .footer-contenedor{
+    grid-template-columns:1fr;
   }
 
 }
