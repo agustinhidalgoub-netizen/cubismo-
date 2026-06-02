@@ -337,33 +337,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* =========================
-     9. CONTADOR ARTISTAS
-  ========================= */
-
-  const paginaArtistas =
-    document.querySelector(".pagina-artistas");
-
-  if (paginaArtistas) {
-
-    const artistas =
-      document.querySelectorAll(".tarjeta-artista");
-
-    const bloqueDato = document.createElement("section");
-
-    bloqueDato.className = "contador-artistas";
-
-    bloqueDato.innerHTML = `
-      <span data-numero="${artistas.length}">0</span>
-      <p>artistas destacados del Cubismo</p>
-    `;
-
-    document.querySelector("main")
-      .appendChild(bloqueDato);
-
-  }
-
-  /* =========================
-     10. BOTÓN ARRIBA
+     9. BOTÓN ARRIBA
   ========================= */
 
   const botonArriba = document.createElement("button");
